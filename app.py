@@ -22,7 +22,7 @@ cv2.rectangle(img_test, (x, y), (x2, y2), (255, 0, 255), 2)
 results = face_recognition.compare_faces([glen_encoding], test_encod)
 face_distance = face_recognition.face_distance([glen_encoding], test_encod)
 print(results, face_distance)
-cv2.putText(img_test, f"{results} {round(face_distance[0],2)}", (50,50),cv2.FONT_HERSHEY_COMPLEX,1,(0,0,255),2)
+cv2.putText(img_test, f"{results} {round(face_distance[0],2)}", (10,40),cv2.FONT_HERSHEY_COMPLEX,1,(0,0,255),2)
 
 cv2.imshow("glen chiridza", img_glen)
 cv2.imshow("glen chiridza test image", img_test)
