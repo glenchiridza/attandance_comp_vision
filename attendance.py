@@ -26,7 +26,26 @@ def find_encodings(image_list):
 
 
 known_list_encoding = find_encodings(images)
-print(len(known_list_encoding))
+print("process of encoding successful")
+
+vid = cv2.VideoCapture(0)
+
+while True:
+    check, frame = vid.read()
+    img = cv2.resize(frame, (0, 0), None, 0.25, 0.25)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+    faces_frame_location = face_recognition.face_locations(img)
+    encoding_faces_frame = face_recognition.face_encodings(img, faces_frame_location)
+
+    for face_encode, face_locale in zip(encoding_faces_frame, faces_frame_location):
+        matches = face_recognition.compare_faces(known_list_encoding, face_encode)
+        face_distance = face_recognition.face_distance(known_list_encoding, face_encode)
+        print(face_distance)
+
+
+
+
 
 # face_location = face_recognition.face_locations(img_glen)[0]
 # glen_encoding = face_recognition.face_encodings(img_glen)[0]
