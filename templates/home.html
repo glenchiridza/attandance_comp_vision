@@ -3,22 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Attendance List</title>
+
+    <style>
+        .row {background:#5bc0de; color:#fff;}
+        th {padding:10px 20px 10px; text-align:left;}
+        #first{width:200px;}
+        body {background:#f2f2f2;}
+    </style>
 </head>
 <body>
-<h1>Student Attendance List Today</h1>
+<h1>Student Attendance : {{date}}</h1>
 
-<table>
+<table border="1">
+    <thead class="row">
     <tr>
-        <th>Full Name</th>
+        <th id="first">Full Name</th>
         <th>Arrival Time</th>
         <th>Marked Present</th>
     </tr>
+    </thead>
 
+    <tfoot>
+
+
+        {% for student in students %}
     <tr>
-        <th>The name</th>
-        <th>12:00</th>
-        <th>True</th>
+            <th>{{student}}</th>
+            <th>12:00</th>
+            <th>True</th>
     </tr>
+
+        {% endfor %}
+    </tfoot>
 </table>
 
 </body>

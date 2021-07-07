@@ -10,6 +10,9 @@ names = []
 listing = os.listdir(path)
 print(listing)
 
+# send this list to the flask app after population of values received from csv file list
+students_in_file_export = []
+
 for img in listing:
     currentImage = cv2.imread(f"{path}/{img}")
     images.append(currentImage)
@@ -29,7 +32,7 @@ def find_encodings(image_list):
 def attandance_record(name):
     with open('students.csv', 'r+') as file:
         contents = file.readlines()
-        student_names =[]
+        student_names = []
         print(contents)
         for line in contents:
             item = line.split(",")
@@ -39,7 +42,7 @@ def attandance_record(name):
         else:
             date = datetime.now()
             date_string = date.strftime('%H:%M:%S')
-            file.writelines(f"\n{name} , {date_string}")
+            file.writelines(f"{name} , {date_string}")
             print(name, "You were marked present")
 
 
@@ -70,12 +73,10 @@ while True:
             attandance_record(name)
 
             y1, x2, y2, x1 = face_locale
-            y1, x2, y2, x1 = y1 *4, x2 *4, y2 *4, x1 *4
+            y1, x2, y2, x1 = y1 * 4, x2 * 4, y2 * 4, x1 * 4
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 0), 2)
             cv2.rectangle(frame, (x1, y2 - 25), (x2, y2), (0, 0, 0), cv2.FILLED)
             cv2.putText(frame, name, (x1 + 6, y2 - 6), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255, 255), 2)
 
-
     cv2.imshow("GLEN_CONNECT CAMERA", frame)
     cv2.waitKey(1)
-
