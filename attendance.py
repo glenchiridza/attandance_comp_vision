@@ -42,10 +42,21 @@ while True:
         matches = face_recognition.compare_faces(known_list_encoding, face_encode)
         face_distance = face_recognition.face_distance(known_list_encoding, face_encode)
         print(face_distance)
+        match_index = np.argmin(face_distance)
 
+        # display bounding box and write their name
+        if matches[match_index]:
+            name = names[match_index].title()
+            print(name)
 
+            y1, x2, y2, x1 = face_locale
+            y1, x2, y2, x1 = y1 *4, x2 *4, y2 *4, x1 *4
+            cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 255), 2)
+            cv2.rectangle(frame, (x1, y2 - 20), (x2, y2), (0, 255, 255), cv2.FILLED)
+            cv2.putText(frame, name, (x1 + 6, y2 - 6), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, (255, 255, 255, 255), 2)
 
-
+    cv2.imshow("cam_view", frame)
+    cv2.waitKey(1)
 
 # face_location = face_recognition.face_locations(img_glen)[0]
 # glen_encoding = face_recognition.face_encodings(img_glen)[0]
