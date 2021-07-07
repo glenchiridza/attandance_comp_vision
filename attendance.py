@@ -42,7 +42,7 @@ def attandance_record(name):
         else:
             date = datetime.now()
             date_string = date.strftime('%H:%M:%S')
-            file.writelines(f"{name} , {date_string}")
+            file.writelines(f"\n{name} , {date_string}")
             print(name, "You were marked present")
 
 

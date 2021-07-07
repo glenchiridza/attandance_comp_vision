@@ -4,7 +4,6 @@
     <list default="true" id="e98f573e-6402-482d-bc5f-771c1d4cbb7b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/attendance.py" beforeDir="false" afterPath="$PROJECT_DIR$/attendance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/students.csv" beforeDir="false" afterPath="$PROJECT_DIR$/students.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
     </list>
@@ -43,7 +42,7 @@
       <recent name="$PROJECT_DIR$/BasicImages" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.flask_app">
+  <component name="RunManager" selected="Python.attendance">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AttendanceWithAI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -130,10 +129,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.flask_app" />
         <item itemvalue="Python.attendance" />
-        <item itemvalue="Python.tester" />
+        <item itemvalue="Python.flask_app" />
         <item itemvalue="Python.app" />
+        <item itemvalue="Python.tester" />
       </list>
     </recent_temporary>
   </component>
@@ -151,22 +150,22 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="711" height="216" key="GridCell.Tab.0.bottom" timestamp="1625663096893">
+    <state width="711" height="173" key="GridCell.Tab.0.bottom" timestamp="1625668441699">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="711" height="216" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1625663096893" />
-    <state width="711" height="216" key="GridCell.Tab.0.center" timestamp="1625663096892">
+    <state width="711" height="173" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1625668441699" />
+    <state width="711" height="173" key="GridCell.Tab.0.center" timestamp="1625668441698">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="711" height="216" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1625663096892" />
-    <state width="711" height="216" key="GridCell.Tab.0.left" timestamp="1625663096892">
+    <state width="711" height="173" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1625668441698" />
+    <state width="711" height="173" key="GridCell.Tab.0.left" timestamp="1625668441698">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="711" height="216" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1625663096892" />
-    <state width="711" height="216" key="GridCell.Tab.0.right" timestamp="1625663096892">
+    <state width="711" height="173" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1625668441698" />
+    <state width="711" height="173" key="GridCell.Tab.0.right" timestamp="1625668441699">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="711" height="216" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1625663096892" />
+    <state width="711" height="173" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1625668441699" />
     <state width="711" height="216" key="GridCell.Tab.1.bottom" timestamp="1625663096893">
       <screen x="0" y="27" width="1366" height="741" />
     </state>

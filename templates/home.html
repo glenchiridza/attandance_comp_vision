@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="10">
     <title>Attendance List</title>
 
     <style>
+        body {background:#f2f2f2;}
         .row {background:#5bc0de; color:#fff;}
         th {padding:10px 20px 10px; text-align:left;}
         #first{width:200px;}
-        body {background:#f2f2f2;}
+        #bottom-footer {position fixed; bottom:0; top:0;}
     </style>
 </head>
 <body>
-<h1>Student Attendance : {{date}}</h1>
+<h1>Facial Recognition Attendance </h1>
+<h3> Attendance List: {{date}}</h3>
 
 <table border="1">
     <thead class="row">
@@ -28,8 +31,8 @@
 
         {% for student in students %}
     <tr>
-            <th>{{student}}</th>
-            <th>12:00</th>
+            <th>{{student[0]}}</th>
+            <th>{{student[1]}}</th>
             <th>True</th>
     </tr>
 
@@ -37,5 +40,9 @@
     </tfoot>
 </table>
 
+<div id="bottom-footer">
+<p>App by Glen Chiridza &copy; 2021</p>
+</div>
 </body>
+
 </html>
